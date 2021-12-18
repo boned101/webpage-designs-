@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <script type="text/javascript">
+   function valid_ISBN() 
+{
+  var x = document.forms["myForm"]["data"].value;
+  if (x == "") 
+{
+    alert("You must enter the ISBN number.");
+    return false;
+  }
+    var ln=x.length;
+            if(ln==13)
+                {
+                    alert("YOU ENTERED A VALID ISBN NUMBER.")
+                }
+            else
+                {
+                    alert("YOU ENTERED A INVALID ISBN NUMBER.")
+                }
+}
+        </script>
+    </head>
+    <body bgcolor="#99ffcc">
+        <h1 align="center">ISBN Number validation</h1>
+        <hr>
+<form name="myForm" action="" onsubmit="return valid_ISBN()" method="post" align="center">
+        ISBN Number:<br><input type="text" name="ISBN Number" size="13"><br>
+        <input type="submit" value="submit">
+        </form>
+    </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html dark="true "style="font-size: 24px;font-family: Work Sans, Arial, sans-serif;>
+<html>
+<head>
+    <title>Intel Booth</title>
+</head>
+<body>
+    <style>
+        body {
+          background-image: url('https://wallpapertag.com/wallpaper/full/1/a/1/350829-widescreen-website-background-1920x1080-windows-xp.jpg');
+          background-repeat: no-repeat;
+          background-attachment: scroll;
+          background-size: cover;
+        }
+        </style>
+<script>                                                           
+var obx = [ 'Name - Smith', 'Mission Duration - 08 months', 'Clearance - O5'];         <!--JSON values stored-->                                                               
+var obj = JSON.stringify(obx);                                               
+function loginFunc() {
+    document.getElementById("access_button").innerHTML =obj;
+    var text = document.getElementById("other_button");
+    if (text.style.display === "none") {
+      text.style.display = "block";
+    } else {
+      text.style.display = "none";
+    }
+}
+function send_data(){                                                                   <!--Json value sent to server-->>
+window.location = "intel_server.php?x=" + obj;
+}
+function verifier(){
+    var text = document.getElementById("another_button");
+    if (text.style.display === "none") {
+      text.style.display = "block";
+    } else {
+      text.style.display = "none";
+    }
+    
+}
+</script>   
+<center>
+<h2>Department of Research and Analysis</h2> 
+<img src="https://thumbs.gfycat.com/AffectionateAstonishingKissingbug-size_restricted.gif">
+<p>In order to provide our services, we need to verify who you are</p> <br>                           
+<button type="button" onclick="loginFunc()">Request Access</button><br>          
+<p id="access_button">**accessing INDEX/PROJECTS/FILES/list_buyers.txt**</p>      <!--Json var retrieved//-->
+<p id="other_button" style="display: none">ACCESS GRANTED ~40 Minutes Remaining~ </p><br>
+<p><Remember to Upload all data when finishing></p><br>
+<button type="button" onclick="send_data()">Upload Data</button><br><br>
+<button type="button" onclick="verifier()">Verify Server Data</button>
+<p id="another_button" style="display: none">Data received</p><br>
+
+</center>
+</body>
+</html> 

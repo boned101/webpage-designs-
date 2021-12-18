@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PHP Form Validation</title>
+    </head>
+    <body>
+       <center> 
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/86/Mossad_seal.svg" alt="" width="150" height="150">
+        <h3>בנק ישראל‎ &reg;</h3>
+        <style>
+            body {
+              background-image: url('https://wallpapertag.com/wallpaper/full/1/a/1/350829-widescreen-website-background-1920x1080-windows-xp.jpg');
+              background-repeat: no-repeat;
+              background-attachment: scroll;
+              background-size: cover;
+            }
+        </style>
+        <p>In order to provide our <b>services</b>, we need some <b>personal data</b><br>
+        Data entries to be filled with * are mandatory for all members</p><br>
+        <form method="POST" action="lab4 php.php">
+            Identification &nbsp;&nbsp;&nbsp;  <input type="text" name="ID" value="" >
+            <span class="error">* <?php echo $IDErr;?></span>
+            <br>
+            <br>
+            Net Worth($ Mil) <input type="number" name="networth" value="">
+            <span class="error">* <?php echo $networthErr;?></span>
+            <br>
+            <br>
+            National Affiliation <input type="text" name="national" value="">
+            <span class="error">* <?php echo $nationalErr;?></span>
+            <br>
+            <br>
+            Orientation:
+            <input type="radio" name="gen" value="female">F
+            <input type="radio" name="gen" value="male">Ms  
+            <span class="error">* <?php echo $genErr;?></span>
+            <p>Our <b>Affiliates</b> are also expected to provide information in return for P and C type <b>products</b></p>
+            Financial Activity Report: <br>
+            <textarea name="report" rows="5" cols="60"></textarea>
+            <br>
+            <br>
+            <input type="submit" name="submit" value="Submit">  
+
+            
+
+        </form>
+          </center>
+    </body>
+</html>
