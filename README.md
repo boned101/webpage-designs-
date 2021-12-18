@@ -1,1 +1,2 @@
-# webpage-designs-
+- Webpages made in HTML , CSS with PHP and JSON for CSE4001 Internet and Web Programming Class in my Undergraduate 
+- Kept here for posterity. Don't expect a revolutionary design.
